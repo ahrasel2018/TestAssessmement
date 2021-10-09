@@ -1,13 +1,11 @@
 /*********************************************************************
-*                   General Motors 									 *
-*               System Engineering Tools   					    	 *
+*                  					    	 *
 * 																	 *
 * Class Name: GCquery 								  				 *
 * Purpose   : 												         *
 * 			            								 			 *
 * 																	 *
 * Date		        Name			Comment                          *
-* Mar 06,2018		Abu Rasel		Created			                 * 
 *																	 *
 **********************************************************************/
 package com.gm.gc.query;

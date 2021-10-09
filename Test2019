@@ -1,0 +1,30 @@
+package com.company;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URI;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+//https://api.coindesk.com/v1/bpi/currentprice.json
+        HttpClient client = HttpClientBuilder.create().build();
+        HttpResponse response=null;
+        WebServiceCalls callObj = new WebServiceCalls();
+        String responseStr = callObj.get(URI.create("https://api.coindesk.com/v1/bpi/currentprice.json"));
+        System.out.println(responseStr);
+        GsonBuilder builder = new GsonBuilder();
+        builder.setPrettyPrinting();
+        Gson gson = builder.create();
+
+    }
+}
